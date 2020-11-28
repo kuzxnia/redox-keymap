@@ -5,7 +5,6 @@
   rgblight_enable_noeeprom();                         \
   rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT); \
   rgblight_sethsv_noeeprom(COLOR);
-#endif
 
 // ----- end functions -----
 
@@ -41,21 +40,21 @@
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
 #define RGBLED_NUM 14
-#define RGBLIGHT_HUE_STEP 8
-#define RGBLIGHT_SAT_STEP 8
-#define RGBLIGHT_VAL_STEP 8
 
 #ifdef RGBLIGHT_ENABLE
 // Change LED colors depending on the layer.
 uint32_t layer_state_set_user(uint32_t state) {
   switch (biton32(state)) {
-    case _SYMB:
+    case _QWERTY:
       AH_STATIC_LIGHT(HSV_GREEN);
       break;
-    case _SYMB_EXT:
+    case _SYMB_ARW:
+      AH_STATIC_LIGHT(HSV_ORANGE);
+      break;
+    case _NUM_MOUSE:
       AH_STATIC_LIGHT(HSV_BLUE);
       break;
-    case _ADJUST:
+    case _MACROS:
       AH_STATIC_LIGHT(HSV_MAGENTA);
       break;
     default:
@@ -107,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     KC_NO,   KC_P1,   KC_P2,   KC_P3,   KC_NO,   KC_NO,   KC_NO,   KC_NO,           KC_WH_U, KC_WH_D, KC_ACL0, KC_ACL1, KC_ACL2, KC_NO,   KC_NO,   KC_NO,
  //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-    KC_LGUI, KC_NO,   KC_NO,   KC_NO,        KC_TRNS,     KC_NO,   KC_NO,           KC_BTN1, KC_BTN2,     KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_NO),
+    KC_LGUI, KC_NO,   KC_NO,   KC_NO,        KC_TRNS,     KC_NO,   KC_NO,           KC_BTN1, KC_BTN2,     KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_NO
  //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
     ),
 	[_MACROS] = LAYOUT(
