@@ -160,7 +160,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  //├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┐       ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_NO,   KC_DEL,          KC_F12,  N_WIN,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
  //├────────┼────────┼────────┼────────┼────┬───┴────┬───┼────────┼────────┤       ├────────┼────────┼───┬────┴───┬────┼────────┼────────┼────────┼────────┤
-    KC_LGUI, KC_WBAK, KC_WFWD, KC_LALT,   MO(_SYMB_ARW),CTL_ESC,LALT(KC_BSPC),     KC_ENT,   KC_SPC,   MO(_NUM_MOUSE),  KC_RALT, KC_LBRC, KC_RBRC, MO(3)
+    KC_LGUI, KC_WBAK, KC_WFWD, KC_LALT,   MO(_SYMB_ARW),CTL_ESC,LALT_T(KC_BSPC),    KC_ENT,   KC_SPC,   MO(_NUM_MOUSE),  KC_RALT, KC_LBRC, KC_RBRC, MO(3)
  //└────────┴────────┴────────┴────────┘    └────────┘   └────────┴────────┘       └────────┴────────┘   └────────┘    └────────┴────────┴────────┴────────┘
     ),
 
